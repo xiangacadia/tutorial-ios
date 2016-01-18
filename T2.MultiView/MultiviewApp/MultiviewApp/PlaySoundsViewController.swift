@@ -52,6 +52,7 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func stopPlay(sender: UIButton) {
         audioPlayer.stop()
+        audioEngine.stop()
     }
 
     @IBAction func playChimp(sender: UIButton) {
