@@ -1,6 +1,6 @@
 //
-//  RecordSoundsViewController.swift
-//  MultiviewApp
+//  ViewController.swift
+//  MultiviewTest
 //
 //  Created by xjiang on 2016-01-17.
 //  Copyright © 2016 xjiang. All rights reserved.
@@ -9,10 +9,8 @@
 import UIKit
 import AVFoundation // library for AVAudioRecorder
 
-class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
-
-    @IBOutlet weak var recordLabel: UILabel!
-    @IBOutlet weak var microphoneButton: UIButton!
+class ViewController: UIViewController, AVAudioRecorderDelegate {
+    @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
     var audioRecorder:AVAudioRecorder!
@@ -33,11 +31,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(sender: UIButton) {
-        print("in recordAudio()")
-        // set visibility of buttons and labels
-        recordLabel.hidden = false
-        microphoneButton.hidden = true
+        print("in recordAudio")
+        
+        recordButton.hidden = true
         stopButton.hidden = false
+        
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
@@ -55,7 +53,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
         
-        // Assign delegate of audioRecorder to be RecordSoundsViewController
         audioRecorder.delegate = self
         
         audioRecorder.meteringEnabled = true
@@ -63,30 +60,29 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
         
         
-        
-        
     }
-
+    
     @IBAction func stopRecording(sender: UIButton) {
-        // set visibility of buttons and labels
-        microphoneButton.hidden = false
-        recordLabel.hidden = true
+        recordButton.hidden = false
         stopButton.hidden = true
+        
         
         // stop recording
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
+        
+        
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if(flag){
-        // Save recorded audio
-        recordedAudio = RecordedAudio()
-        recordedAudio.filePathUrl = recorder.url
-        recordedAudio.title = recorder.url.lastPathComponent
-        
-        self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+            // Save recorded audio
+            recordedAudio = RecordedAudio()
+            recordedAudio.filePathUrl = recorder.url
+            recordedAudio.title = recorder.url.lastPathComponent
+            
+            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         }
     }
     
@@ -100,6 +96,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             playSoundsVC.receivedAudio = data
         }
     }
+
+    
     
     
 }
