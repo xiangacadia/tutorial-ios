@@ -10,4 +10,7 @@ import UIKit
 
 class DataCell: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
+    var xIndex = 0
+    var yIndex = 0
+    
 }

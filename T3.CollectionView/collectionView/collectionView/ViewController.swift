@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
+    let len = 9
+    var count = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("DataCell", forIndexPath: indexPath) as! DataCell
         cell.name.text = "0"
+        cell.xIndex = count / 9
+        cell.yIndex = count % 9
+        count++
         return cell
     }
     
@@ -38,6 +43,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // You can use indexPath to get "cell number x", or get the cell like:
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! DataCell
         cell.name.text = "1"
+        print("row index:", cell.xIndex)
+        print("col index:", cell.yIndex)
     }
 
 }
