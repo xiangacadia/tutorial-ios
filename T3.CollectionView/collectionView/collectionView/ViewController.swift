@@ -23,7 +23,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     // how many items you want to show in its grid
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 81
     }
     
     // create data
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         // You can use indexPath to get "cell number x", or get the cell like:
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! DataCell
-        cell.name.text = "yes"
+        cell.name.text = "1"
     }
 
 }
