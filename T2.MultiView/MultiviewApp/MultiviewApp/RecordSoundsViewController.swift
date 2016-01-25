@@ -20,6 +20,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
+        recordLabel.text = "Tap to Record"
     }
     
     override func viewDidLoad() {
@@ -35,7 +36,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(sender: UIButton) {
         print("in recordAudio()")
         // set visibility of buttons and labels
-        recordLabel.hidden = false
+        recordLabel.text = "Recording..."
         microphoneButton.hidden = true
         stopButton.hidden = false
         
@@ -70,7 +71,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func stopRecording(sender: UIButton) {
         // set visibility of buttons and labels
         microphoneButton.hidden = false
-        recordLabel.hidden = true
+        recordLabel.text = "Tap to Record"
         stopButton.hidden = true
         
         // stop recording

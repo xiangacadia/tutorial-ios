@@ -16,7 +16,6 @@
 		CAEAC0EE1C4C1019008820DC /* MultiviewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEAC0ED1C4C1019008820DC /* MultiviewAppTests.swift */; };
 		CAEAC0F91C4C1019008820DC /* MultiviewAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEAC0F81C4C1019008820DC /* MultiviewAppUITests.swift */; };
 		CAEAC1071C4C242B008820DC /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEAC1061C4C242B008820DC /* PlaySoundsViewController.swift */; };
-		CAEAC1091C4C26BC008820DC /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAEAC1081C4C26BC008820DC /* movie_quote.mp3 */; };
 		CAEAC10B1C4C3408008820DC /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEAC10A1C4C3408008820DC /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		CAEAC0F81C4C1019008820DC /* MultiviewAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiviewAppUITests.swift; sourceTree = "<group>"; };
 		CAEAC0FA1C4C1019008820DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAEAC1061C4C242B008820DC /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
-		CAEAC1081C4C26BC008820DC /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = movie_quote.mp3; path = ../../resources/movie_quote.mp3; sourceTree = "<group>"; };
 		CAEAC10A1C4C3408008820DC /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +109,6 @@
 				CAEAC0D91C4C1019008820DC /* Main.storyboard */,
 				CAEAC1061C4C242B008820DC /* PlaySoundsViewController.swift */,
 				CAEAC0DF1C4C1019008820DC /* Assets.xcassets */,
-				CAEAC1081C4C26BC008820DC /* movie_quote.mp3 */,
 				CAEAC0E11C4C1019008820DC /* LaunchScreen.storyboard */,
 				CAEAC0E41C4C1019008820DC /* Info.plist */,
 				CAEAC0DC1C4C1019008820DC /* MultiviewApp.xcdatamodeld */,
@@ -243,7 +240,6 @@
 			files = (
 				CAEAC0E31C4C1019008820DC /* LaunchScreen.storyboard in Resources */,
 				CAEAC0E01C4C1019008820DC /* Assets.xcassets in Resources */,
-				CAEAC1091C4C26BC008820DC /* movie_quote.mp3 in Resources */,
 				CAEAC0DB1C4C1019008820DC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +496,7 @@
 				CAEAC0FF1C4C1019008820DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAEAC1001C4C1019008820DC /* Build configuration list for PBXNativeTarget "MultiviewAppTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +505,7 @@
 				CAEAC1021C4C1019008820DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAEAC1031C4C1019008820DC /* Build configuration list for PBXNativeTarget "MultiviewAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +514,7 @@
 				CAEAC1051C4C1019008820DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -83,17 +84,17 @@
                                 <exclude reference="xKx-vq-ir4"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Np9-FF-QTD"/>
+                                <exclude reference="IP6-Sl-HYI"/>
+                                <exclude reference="nwc-Q4-QVL"/>
                                 <exclude reference="8Li-af-7cA"/>
                                 <exclude reference="J7K-cG-45Y"/>
                                 <exclude reference="goX-dg-Flc"/>
                                 <exclude reference="mKI-kr-a3C"/>
+                                <exclude reference="mdq-d9-Th0"/>
                                 <exclude reference="IoP-eT-tnb"/>
                                 <exclude reference="JoK-Ae-PEa"/>
                                 <exclude reference="OFd-ga-PNc"/>
-                                <exclude reference="IP6-Sl-HYI"/>
-                                <exclude reference="nwc-Q4-QVL"/>
-                                <exclude reference="mdq-d9-Th0"/>
-                                <exclude reference="Np9-FF-QTD"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -105,17 +106,17 @@
                                 <include reference="xKx-vq-ir4"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Np9-FF-QTD"/>
+                                <include reference="IP6-Sl-HYI"/>
+                                <include reference="nwc-Q4-QVL"/>
                                 <include reference="8Li-af-7cA"/>
                                 <include reference="J7K-cG-45Y"/>
                                 <include reference="goX-dg-Flc"/>
                                 <include reference="mKI-kr-a3C"/>
+                                <include reference="mdq-d9-Th0"/>
                                 <include reference="IoP-eT-tnb"/>
                                 <include reference="JoK-Ae-PEa"/>
                                 <exclude reference="OFd-ga-PNc"/>
-                                <include reference="IP6-Sl-HYI"/>
-                                <include reference="nwc-Q4-QVL"/>
-                                <include reference="mdq-d9-Th0"/>
-                                <include reference="Np9-FF-QTD"/>
                             </mask>
                         </variation>
                     </view>
@@ -144,11 +145,11 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RkM-oF-pl1"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnX-aq-8pm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnX-aq-8pm">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.057009298360000002" green="0.024114008539999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrJ-Ny-vPQ">
@@ -176,12 +177,12 @@
                                 <exclude reference="JrJ-Ny-vPQ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Alx-bo-xaf"/>
-                                <exclude reference="lba-AL-CzN"/>
-                                <exclude reference="WAc-1Z-dI2"/>
-                                <exclude reference="am7-ai-fVo"/>
                                 <exclude reference="EVm-yQ-lqJ"/>
                                 <exclude reference="NRf-vd-GXy"/>
+                                <exclude reference="WAc-1Z-dI2"/>
+                                <exclude reference="am7-ai-fVo"/>
+                                <exclude reference="Alx-bo-xaf"/>
+                                <exclude reference="lba-AL-CzN"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -190,12 +191,12 @@
                                 <include reference="JrJ-Ny-vPQ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Alx-bo-xaf"/>
-                                <include reference="lba-AL-CzN"/>
-                                <include reference="WAc-1Z-dI2"/>
-                                <include reference="am7-ai-fVo"/>
                                 <include reference="EVm-yQ-lqJ"/>
                                 <include reference="NRf-vd-GXy"/>
+                                <include reference="WAc-1Z-dI2"/>
+                                <include reference="am7-ai-fVo"/>
+                                <include reference="Alx-bo-xaf"/>
+                                <include reference="lba-AL-CzN"/>
                             </mask>
                         </variation>
                     </view>
