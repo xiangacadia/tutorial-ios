@@ -16,7 +16,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var stopButton: UIButton!
     
     var audioRecorder:AVAudioRecorder!
-    var recordedAudio:RecordedAudio!
+    var recordedAudio = RecordedAudio() // use initializer
     
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
