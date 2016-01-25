@@ -32,8 +32,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("DataCell", forIndexPath: indexPath) as! DataCell
         cell.name.text = "0"
-        cell.xIndex = count / 9
-        cell.yIndex = count % 9
+        cell.xIndex = count / len
+        cell.yIndex = count % len
         count++
         return cell
     }
