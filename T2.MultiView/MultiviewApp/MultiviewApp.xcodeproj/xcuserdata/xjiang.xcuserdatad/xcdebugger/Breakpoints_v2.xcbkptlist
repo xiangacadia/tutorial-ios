@@ -2,4 +2,69 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MultiviewApp/RecordSoundsViewController.swift"
+            timestampString = "475965408.610996"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "RecordSoundsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MultiviewApp.RecordSoundsViewController.__deallocating_deinit"
+                  moduleName = "MultiviewApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xjiang/Documents/git/tutorial-ios/T2.MultiView/MultiviewApp/MultiviewApp/RecordSoundsViewController.swift"
+                  timestampString = "475965408.622158"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MultiviewApp.RecordSoundsViewController.init (MultiviewApp.RecordSoundsViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; MultiviewApp.RecordSoundsViewController"
+                  moduleName = "MultiviewApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xjiang/Documents/git/tutorial-ios/T2.MultiView/MultiviewApp/MultiviewApp/RecordSoundsViewController.swift"
+                  timestampString = "475965408.623675"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MultiviewApp.RecordSoundsViewController.init (MultiviewApp.RecordSoundsViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MultiviewApp.RecordSoundsViewController&gt;"
+                  moduleName = "MultiviewApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xjiang/Documents/git/tutorial-ios/T2.MultiView/MultiviewApp/MultiviewApp/RecordSoundsViewController.swift"
+                  timestampString = "475965408.623893"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
