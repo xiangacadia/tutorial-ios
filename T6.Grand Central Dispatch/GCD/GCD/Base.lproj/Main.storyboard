@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GCD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZ6-qn-RKO">
+                                <rect key="frame" x="50" y="159" width="82" height="30"/>
+                                <state key="normal" title="background"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MMb-mU-oGk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVh-xy-53J">
+                                <rect key="frame" x="469" y="159" width="81" height="30"/>
+                                <state key="normal" title="mainThread"/>
+                                <connections>
+                                    <action selector="button2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rrm-jL-tl4"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0I9-VG-S14">
+                                <rect key="frame" x="43" y="303" width="100" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1H1-5Z-gLf">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiL-WK-voJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HgD-6D-rmR"/>
+                                    <constraint firstAttribute="width" constant="100" id="WJ2-nS-8n6"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEJ-ky-tWr">
+                                <rect key="frame" x="458" y="303" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Av0-tz-USd"/>
+                                    <constraint firstAttribute="width" constant="100" id="jtC-LN-5m9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpg-ZJ-ZfG">
+                                <rect key="frame" x="54" y="230" width="79" height="30"/>
+                                <state key="normal" title="disable edit"/>
+                                <connections>
+                                    <action selector="disableText1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7TB-1Z-wXH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP3-Da-PZf">
+                                <rect key="frame" x="470" y="230" width="79" height="30"/>
+                                <state key="normal" title="disable edit"/>
+                                <connections>
+                                    <action selector="disableText2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKd-7K-AEj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="qP3-Da-PZf" secondAttribute="trailing" constant="48" id="4bS-Ni-kDW"/>
+                            <constraint firstItem="XZ6-qn-RKO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="6jZ-DR-u5v"/>
+                            <constraint firstItem="Gpg-ZJ-ZfG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="84g-5n-vNo"/>
+                            <constraint firstItem="Gpg-ZJ-ZfG" firstAttribute="top" secondItem="XZ6-qn-RKO" secondAttribute="bottom" constant="41" id="FSi-1w-Fun"/>
+                            <constraint firstItem="kVh-xy-53J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="139" id="GEO-Nh-hbr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nEJ-ky-tWr" secondAttribute="trailing" constant="22" id="KGD-FH-XUI"/>
+                            <constraint firstItem="qP3-Da-PZf" firstAttribute="top" secondItem="kVh-xy-53J" secondAttribute="bottom" constant="41" id="LAP-NV-Dts"/>
+                            <constraint firstItem="qiL-WK-voJ" firstAttribute="width" secondItem="nEJ-ky-tWr" secondAttribute="width" id="SLd-wV-0bb"/>
+                            <constraint firstItem="nEJ-ky-tWr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="283" id="UTK-bh-SSB"/>
+                            <constraint firstItem="qiL-WK-voJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="23" id="WCz-ZZ-tYk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kVh-xy-53J" secondAttribute="trailing" constant="30" id="WnW-3X-cKP"/>
+                            <constraint firstItem="qiL-WK-voJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="283" id="lzg-jF-7gn"/>
+                            <constraint firstItem="qiL-WK-voJ" firstAttribute="height" secondItem="nEJ-ky-tWr" secondAttribute="height" id="oeV-D2-rQL"/>
+                            <constraint firstItem="XZ6-qn-RKO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="139" id="tVD-Ru-tdV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn1" destination="XZ6-qn-RKO" id="Bcw-vg-zSx"/>
+                        <outlet property="btn2" destination="kVh-xy-53J" id="oXF-KA-VY3"/>
+                        <outlet property="text1" destination="qiL-WK-voJ" id="ssf-hD-lyK"/>
+                        <outlet property="text2" destination="nEJ-ky-tWr" id="0an-be-Z83"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
