@@ -28,7 +28,15 @@
 - Download file in background
 - Request and parse JSON
 
-## Tutorial 5. Core Data
+## Tutorial 6. Core Data
 - Add items, attributes, relationships
 - Understand core data stack
 - Store and load data
+
+## Tutorial 7. Grand Central Dispatch and Concurrency
+- Serial, concurrence and parallelism
+- Critical section
+- Race condition
+- Thread safe
+- Dispatch queues
+- dispatch_async()
