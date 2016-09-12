@@ -43,6 +43,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func disableText1(sender: UIButton) {
+        
+        
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
             self.text1.enabled = false
         })

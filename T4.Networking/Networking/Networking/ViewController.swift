@@ -1,90 +1,59 @@
-//
-//  ViewController.swift
-//  Networking
-//
-//  Created by xjiang on 2016-01-31.
-//  Copyright © 2016 xjiang. All rights reserved.
-//
 
-import UIKit
-
-class ViewController: UIViewController, NSURLSessionDownloadDelegate {
-
-    let url = NSURL(string: "https://raw.githubusercontent.com/xiangacadia/tutorial-ios/master/README.md")
+boolean
+search( treenode **root, int data )
+{
+    boolean found = false;
+    treenode *child;
+    treenode *grandparent;
+    treenode *node = *root;
     
-    var downloadTask: NSURLSessionDownloadTask!
-    var backgroundSession: NSURLSession!
-    var bytes: NSMutableData?
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        // download data
-        downloadData()
-        
-        // set up background process
-        let backgroundSessionConfiguration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier("backgroundSession")
-        backgroundSession = NSURLSession(configuration: backgroundSessionConfiguration, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
-        
-        // download file
-        downloadFile()
-    
-        weatherSearch(){ dictionary in
-            //print(dictionary)
-        }
-        
-           }
-    
-    func downloadData() {
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
-        }
-        
-        task.resume()
-    }
-
-    func downloadFile() {
-        downloadTask = backgroundSession.downloadTaskWithURL(self.url!)
-        downloadTask.resume()
+    while (!found && (node != NULL) {
+    if (node->data == data) { found = true; }
+    else if (node->data > data) { node = node->left; }
+    else { node = node->right; }
     }
     
-    // Tells the delegate that a download task has finished downloading.
-    func URLSession(session: NSURLSession,
-        downloadTask: NSURLSessionDownloadTask,
-        didFinishDownloadingToURL location: NSURL){
-            
-            let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-            let documentDirectoryPath:String = path[0]
-            let destinationURLForFile = NSURL(fileURLWithPath: documentDirectoryPath.stringByAppendingString("/file.md"))
-            print(destinationURLForFile)
-            
+    /* Try to make future searches for this same value faster. */
+    
+    if (found) {
+    node->searchcount++;
+    
+    while ((node->parent != NULL) &&
+    (node->searchcount > node->parent->searchcount)) {
+    
+    /* Do a tree rotation to make node the parent now */
+    if (node == node->parent->left) {
+    
+    child = node->right;
+    node->right = node->parent;
+    node->parent->left = child;
+    
+    } else {
+    child = node->left;
+    node->left = node->parent;
+    node->parent->right = child;
     }
     
-    func weatherSearch(callback: (Dictionary<String,AnyObject> -> ())) {
-        let urlPath = "http://api.openweathermap.org/data/2.5/weather?id=6324729&appid=44db6a862fba0b067b1930da0d769e98"
-        let url = NSURL(string: urlPath)
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
-            print("Task completed")
-            if(error != nil) {
-                // If there is an error in the web request, print it to the console
-                print(error!.localizedDescription)
-            }
-            do {
-            if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
-                let dataOut = jsonResult as! Dictionary<String,AnyObject>
-                callback(dataOut)
-                print(dataOut)
-            }
-            }catch let serializationError as NSError {
-                print(serializationError)
-            }
-        })
-        task.resume()
+    /* Make the grandparent of "node" now think that "node"
+    is its child.  */
+    
+    grandparent = node->parent->parent;
+    node->parent->parent = node;
+    
+    if (grandparent != NULL) {
+    if (grandparent->left == node->parent) {
+    grandparent->left = node;
+    } else {
+    grandparent->right = node;
+    }
+    } else {
+    /* We rotated to become the root. */
+    
+    *root = node;
+    }
+    node->parent = grandparent;
+    }
     }
     
-    
+    return found;
 }
-
