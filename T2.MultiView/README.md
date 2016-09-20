@@ -4,6 +4,5 @@ You are going to:
 - Add views and ViewControllers
 - Transition between screens
 - Record and play audio
-- Change audio speed
 - Create Model
-- Add delegate
+- Transfer data between screens
