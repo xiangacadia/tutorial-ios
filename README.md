@@ -12,9 +12,8 @@
 - Add views and ViewControllers
 - Transition between screens
 - Record and play audio
-- Change audio speed
 - Create Model
-- Add delegate
+- Transfer data between screens
 
 ## Tutorial 3. CollectionView App
 - Add collection view
@@ -23,15 +22,19 @@
 - Change initialization of data cells
 - Specify responses for selection events
 
-## Tutorial 4. Networking
+## Tutorial 4. Q&A
+
+## Tutorial 5. User Defined Delegates and Basic Storage (Core Data)
+- Add items, attributes, relationships
+- Understand core data stack
+- Store and load data
+
+## Tutorial 6. Networking
 - Request data from url
 - Download file in background
 - Request and parse JSON
 
-## Tutorial 6. Core Data
-- Add items, attributes, relationships
-- Understand core data stack
-- Store and load data
+
 
 ## Tutorial 7. Grand Central Dispatch and Concurrency
 - Serial, concurrence and parallelism
@@ -40,3 +43,16 @@
 - Thread safe
 - Dispatch queues
 - dispatch_async()
+
+
+## Tutorial 8. Location Queries (GPS), Accelerometers and the Map
+
+## Tutorial 9. Debugging and Unit Test
+
+## Tutorial 10. Style Guide and Coding Conventions
+
+## Tutorial 11. Publish in AppStore
+
+
+
+
