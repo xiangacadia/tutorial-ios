@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>collectionView.xcscheme</key>
+		<key>Grid.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CA2575D51C55EF9F00E4281D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CA2575EC1C55EF9F00E4281D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CA2575F71C55EF9F00E4281D</key>
+		<key>CAA2D5831D9AE53400BEE49C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
