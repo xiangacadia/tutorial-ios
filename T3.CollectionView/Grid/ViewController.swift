@@ -67,9 +67,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         (row, column) = getlocation(indexPath)
         data.set_num(row, column: column, value: 1) // update model
         
+        // update view on the main thread
+        dispatch_async(dispatch_get_main_queue(), {
+            collectionView.reloadData()
+        })
+
         
-        collectionView.reloadData() // update view
-    }
+            }
     
     func getlocation(indexPath: NSIndexPath) -> (row: Int, column: Int) {
         let row: Int = indexPath.row / itemsPerRow
