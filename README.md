@@ -24,7 +24,7 @@
 
 ## Tutorial 4. Q&A
 
-## Tutorial 5. User Defined Delegates and Basic Storage (Core Data)
+## Tutorial 5. Basic Storage (Core Data)
 - Add items, attributes, relationships
 - Understand core data stack
 - Store and load data
