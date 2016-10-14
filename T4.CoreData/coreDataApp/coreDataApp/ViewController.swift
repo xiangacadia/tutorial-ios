@@ -11,9 +11,10 @@ import CoreData
 
 class ViewController: UIViewController, UITextViewDelegate {
 
-    var text = NSManagedObject() // model
+    //var text = NSManagedObject() // model
 
     @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -61,7 +62,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         let managedContext = appDelegate.managedObjectContext
         
         let fetchRequest = NSFetchRequest(entityName: "Data")
-        
+    
         do {
             let data =
                 try managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
