@@ -31,9 +31,8 @@
 
 ## Tutorial 6. Networking
 - Request data from url
-- Download file in background
 - Request and parse JSON
-
+- Request and parse XML
 
 
 ## Tutorial 7. Grand Central Dispatch and Concurrency
