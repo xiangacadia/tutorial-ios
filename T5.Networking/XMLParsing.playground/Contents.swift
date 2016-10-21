@@ -50,6 +50,6 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     
 }
 
-let url = NSURL(string: "http://weather.gc.ca/rss/city/ns-19_e.xml")
+let url = NSURL(string: "https://weather.gc.ca/rss/city/ns-19_e.xml")
 var xmlParser = XMLParser()
 xmlParser.startParsingWithContentsOfURL(url!)
